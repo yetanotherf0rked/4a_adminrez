@@ -1,0 +1,10 @@
+http_port 3128
+visible_hostname malki-proxy
+acl homenetwork src 192.168.43.0/24
+http_access allow homenetwork 
+cache_mem 1024 MB
+maximum_object_size_in_memory 1024 KB
+memory_replacement_policy heap LFUDA
+cache_replacement_policy heap LFUDA
+cache_dir aufs /var/spool/squid 10240 16 256
+
